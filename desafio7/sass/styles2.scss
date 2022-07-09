@@ -1,0 +1,108 @@
+
+.experiencia1 {
+    width: 100%;
+    display:flex;
+    justify-content:space-evenly;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    article{
+        border: solid 1px rgb(23, 22, 22);
+        
+        span{
+            text-align: right;
+            color:white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            float:left;
+            text-align:center;
+            margin: 10%;
+        }
+        img{
+            display:flex;
+            justify-content:center;
+            width: 100%;
+            height: 200px;
+        }
+        img:hover{
+            transform: translate(2%);
+            opacity:0.5;
+        }
+    }
+}
+.experiencia2{
+    article{
+        text-align: center;
+        display:grid;
+        justify-content:center;
+        color:white;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        p{
+            width: 100%;
+            margin-right:10%;
+        }
+    }
+}
+.video{
+    width: 100%;
+    border: 1px solid whitesmoke;
+}
+
+/*Mapa*/
+$colorletra: (
+    f1: rgb(10, 10, 10),
+    f2: black,
+    f3: grey,
+    f4: green,
+    f5: violet,
+    f6: rgb(12,12,12),
+    f7: white,
+    
+);
+@each $nombre, $valor in $colorletra {
+    .color-#{$nombre} {
+        color: $valor;
+    }
+}
+
+/*Mapget*/
+$colores: (
+    principal: white,
+    base: grey,
+    fondo: rgb(10,10,10)
+);
+
+.box-muestra {
+    background-color: map-get($colores, principal);
+}
+
+.galeria {
+    background: map-get($colores, fondo);
+}
+
+/*extend*/
+
+.img-itm {
+    width: 100%;
+    height: 100px;
+    border: 1px solid white;
+}
+.img-itm2 {
+    @extend .img-itm;
+    display: block;
+}
+
+/*mixin*/
+
+@mixin btn {
+    display: inline-block;
+    padding: 10px;
+    width:25%;
+    color:black;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+.btn--colorido {
+    @include btn;
+    background:aquamarine;
+}
