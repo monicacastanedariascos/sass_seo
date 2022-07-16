@@ -347,3 +347,15 @@ footer a i {
 .logo {
     margin-left:25%
 }
+
+.btn--colorido {
+    display: inline-block;
+    padding: 10px;
+    width: 45%;
+    color: black;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: sans-serif;
+    background: aquamarine;
+  }
